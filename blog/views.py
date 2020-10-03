@@ -42,6 +42,12 @@ def blogpost(request, slug):
 def resources(requests):
 	return render(requests, 'resources.html')
 
+def projects(requests):
+	return render(requests, 'projects.html')
+
+def error_404(request, exception):
+	return render(request, '404.html')
+
 def join(requests):
 	if requests.method == 'POST':
 		name = requests.POST.get("name")

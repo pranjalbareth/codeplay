@@ -113,14 +113,13 @@
     .card-text {
       font-family: 'Noto Serif', serif;
     }
-    .vertcard2 {
-    	width: 55%;
-		height: 55%;
-    }
-    .vertcard {
-    	width: 65%;
-		height: 55%;
-    }
+	 .vertcard {
+	 	width:auto;
+	 	height:252px;
+	}   
+	.card-body{
+		margin-left:-20px;
+	}
 </style>
 <style media="screen and (max-width: 600px)">
 			.icot {
@@ -189,7 +188,7 @@
 		<div class="card mb-3" style="max-width: 950px;">
           <div class="row no-gutters">
             <div class="col-md-7">
-              <img src="http://127.0.0.1:8000/media/ai-poster.png" class="card-img" alt="Developer is Asleep">
+              <img src="http://127.0.0.1:8000/media/ai-poster.png" class="card-img" onerror=this.src="https://i.imgur.com/fOWuolO.png">
             </div>
             <div class="col-md-5">
               <div class="card-body">
@@ -212,31 +211,91 @@
               </div>
             </div>
             <div class="col-md-7">
-              <img src="http://127.0.0.1:8000/media/tech-aug_KuI1fc1.png" class="card-img" alt="Developer is Asleep">
+              <img src="http://127.0.0.1:8000/media/tech-aug_KuI1fc1.png" class="card-img" onerror=this.src="https://i.imgur.com/fOWuolO.png">
             </div>
           </div>
         </div>
-        <br>
-		<div class="row">
-			<div class="col-md">
-				<div class="text-center">
-  					<img src="http://127.0.0.1:8000/media/visulazing.png" class="vertcard rounded" alt="...">
-  					<div class="my-4">
-  						<h5 style="font-weight:bold;"> Best Coding Article </h5>
-  		
-  					<p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at accumsan dolor, eget dignissim eros. Nulla rutrum pulvinar orci a venenatis. Integer luctus nec metus ac facilisis. Vivamus congue justo sit amet sapien dapibus consequat. </p>
-  					</div>
-				</div>
+        <br><br>
+        <div class="card-deck max-width: 650px;">
+			  <div class="card" style="max-width: 650px;">
+			    <img src="http://127.0.0.1:8000/media/visulazing.png" class="vertcard rounded" onerror=this.src="https://i.imgur.com/fOWuolO.png">
+			    <div class="card-body">
+			      <h4 class="card-title text-dark"><a class="title-tit text-dark" href="/blogpost/visualizing-the-defective-chessboard-problem">Visualizing the Defective Chessboard problem</a></h4>
+			      <p class="card-text"> The Defective Chessboard problem, also known as the Tiling Problem is an interesting problem. It is typically solved with a “divide and conquer” approach. The algorithm has a time the Tiling Problem is an interesting problem. It is typically the Tiling Problem is an interesting problem. It is typically</p>
+			      <footer>
+			      <p class="card-text"><small class="text-muted">Author : Pranjal Bareth &nbsp;&nbsp; | &nbsp;&nbsp;</span>Sep 07, 2020&nbsp;&nbsp;&bull;&nbsp;&nbsp;11 min read</small></p>
+			    	</footer>
+			    </div>
+			  </div>
+			  <div class="card">
+			    <img src="http://127.0.0.1:8000/media/TimeTable.jpg" class="vertcard rounded" onerror=this.src="https://i.imgur.com/fOWuolO.png">
+			     <div class="card-body">
+			      <h4 class="card-title text-dark"><a class="title-tit text-dark" href="/blogpost/visualizing-the-defective-chessboard-problem">The Time Table Generator</a></h4>
+			      <p class="card-text">The time-table fiasco is nothing new or particular to us. It is a problem that every student of SSTC Bhilai has faced at some time or the other, and especially as a fresher when there are just too many options and clashes.Ideation is the first step towards making anything happen. Better the ideation, easier, and swifter will be its implementation. Better the ideation, easier, and swifter will be its implementation.</p>
+			     <footer>
+			      <p class="card-text"><small class="text-muted">Author : Pranjal Bareth &nbsp;&nbsp; | &nbsp;&nbsp;</span>Sep 07, 2020&nbsp;&nbsp;&bull;&nbsp;&nbsp;6 min read</small></p>
+			  </footer>
+			    </div>
+			  </div>
 			</div>
-			<div class="col-md-4">
-				<div class="text-center">
-  					<img src="http://127.0.0.1:8000/media/TimeTable.jpg" class="vertcard2 rounded" alt="...">
-  					<div class="my-4">
-  						<h5 style="font-weight:bold;"> Free Courses </h5>
-  					<p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at accumsan dolor, eget dignissim eros. Nulla rutrum pulvinar orci a venenatis. Integer luctus nec metus ac facilisis. Vivamus congue justo sit amet sapien dapibus consequat. </p>
-  					</div>
-  				</div>
+			<br>
+			<hr>
+			<div class="card mb-3" style="max-width: 950px;">
+          <div class="row no-gutters">
+            <div class="col-md-7">
+              <img src="http://127.0.0.1:8000/media/ai-poster.png" class="card-img" onerror=this.src="https://i.imgur.com/fOWuolO.png">
+            </div>
+            <div class="col-md-5">
+              <div class="card-body">
+                <!--a class="tag" href="/{{blog.tag}}">{{blog.tag}}</a><p></p-->
+                <h4 class="card-title text-dark"><a class="title-tit text-dark" href="/blogpost/understanding-the-jargon-ai-sub-fields">Understanding the jargon: AI Sub-fields</a></h4>
+                <p class="card-text">In this article, we will attempt to de-mystify all the jargon that is associated with artificial intelligence and data science. But first, we’ll need to understand the very basics of how an AI algorithm works to be able to better gauge what the content given below means. we will attempt to de-mystify all the jargon that is associated with artificial intelligence and data science.</p>
+                <p class="card-text"><small class="text-muted">Author : Pranjal Bareth &nbsp;&nbsp; | &nbsp;&nbsp;</span>Sep 09, 2020&nbsp;&nbsp;&bull;&nbsp;&nbsp;9 min read</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 950px;">
+          <div class="row no-gutters">
+            <div class="col-md-5">
+              <div class="card-body">
+                <!--a class="tag" href="/{{blog.tag}}">{{blog.tag}}</a><p></p-->
+                <h4 class="card-title text-dark"><a class="title-tit text-dark" href="/blogpost/tech-on-campus-august-edition">Tech on Campus: August Edition</a></h4>
+                <p class="card-text">Tech on Campus aims to shine the spotlight on projects and experiments SSTC Bhilai students are doing. Check out what they've been up to all through August. Welcome to the August edition of Tech on Campus, a monthly newsletter that shines the spotlight on recent projects and experiments being done by students of SSTC Bhilai. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at accumsan dolor.</p>
+                <p class="card-text"><small class="text-muted">Author : Pranjal Bareth &nbsp;&nbsp; | &nbsp;&nbsp;</span>Sep 07, 2020&nbsp;&nbsp;&bull;&nbsp;&nbsp;7 min read</small></p>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <img src="http://127.0.0.1:8000/media/tech-aug_KuI1fc1.png" class="card-img" onerror=this.src="https://i.imgur.com/fOWuolO.png">
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <div class="card-deck max-width: 650px;">
+			  <div class="card" style="max-width: 650px;">
+			    <img src="http://127.0.0.1:8000/media/visulazing.png" class="vertcard rounded" onerror=this.src="https://i.imgur.com/fOWuolO.png">
+			    <div class="card-body">
+			      <h4 class="card-title text-dark"><a class="title-tit text-dark" href="/blogpost/visualizing-the-defective-chessboard-problem">Visualizing the Defective Chessboard problem</a></h4>
+			      <p class="card-text"> The Defective Chessboard problem, also known as the Tiling Problem is an interesting problem. It is typically solved with a “divide and conquer” approach. The algorithm has a time the Tiling Problem is an interesting problem. It is typically the Tiling Problem is an interesting problem. It is typically</p>
+			      <footer>
+			      <p class="card-text"><small class="text-muted">Author : Pranjal Bareth &nbsp;&nbsp; | &nbsp;&nbsp;</span>Sep 07, 2020&nbsp;&nbsp;&bull;&nbsp;&nbsp;11 min read</small></p>
+			    	</footer>
+			    </div>
+			  </div>
+			  <div class="card">
+			    <img src="http://127.0.0.1:8000/media/TimeTable.jpg" class="vertcard rounded" onerror=this.src="https://i.imgur.com/fOWuolO.png">
+			     <div class="card-body">
+			      <h4 class="card-title text-dark"><a class="title-tit text-dark" href="/blogpost/visualizing-the-defective-chessboard-problem">The Time Table Generator</a></h4>
+			      <p class="card-text">The time-table fiasco is nothing new or particular to us. It is a problem that every student of SSTC Bhilai has faced at some time or the other, and especially as a fresher when there are just too many options and clashes.Ideation is the first step towards making anything happen. Better the ideation, easier, and swifter will be its implementation. Better the ideation, easier, and swifter will be its implementation.</p>
+			     <footer>
+			      <p class="card-text"><small class="text-muted">Author : Pranjal Bareth &nbsp;&nbsp; | &nbsp;&nbsp;</span>Sep 07, 2020&nbsp;&nbsp;&bull;&nbsp;&nbsp;6 min read</small></p>
+			  </footer>
+			    </div>
+			  </div>
 			</div>
-		</div>
+        <br><br>
+        <hr>
+        <br><br>
+        
 	</div>
 	{% endblock body %}

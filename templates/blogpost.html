@@ -143,8 +143,9 @@
         <span class="dateread">{{blog.created}}&nbsp;&nbsp;&bull;&nbsp;&nbsp;{{blog.read_time}}</span>
     {% endif %}
     <br><br>
-
-    <img class="poster" src="http://127.0.0.1:8000/media/{{blog.poster}}" alt="ERROR 401 : Image cannot be loaded. Know More"><br>
+    <div class="col-md-4">
+    <img class="poster" src="http://127.0.0.1:8000/media/{{blog.poster}}" onerror=this.src="https://i.imgur.com/fOWuolO.png"><br>
+    </div>
     <div class="my-3">
     {{blog.content|safe}}
     </div>

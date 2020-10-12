@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block joinactive %}active{% endblock joinactive %}
+{% block css %}
+<style>
+        .container {
+        		min-height: 150vh;
+        }
+        body {
+  				font-family: 'Varela Round', sans-serif;;
+ 		 		padding: 0;
+ 		 		margin: 0;
+		}
+		p {
+  				font-size: 15px;
+  				font-family: 'Varela Round', sans-serif;
+		}
+		h2 {
+  				/*font-size: 15px;*/
+  				font-family: 'Varela Round', sans-serif;
+		}
+		/*nav{
+  				width: 100%;
+  				margin: 0 auto;
+  				background: #000;
+  				padding: 30px 0;
+  				box-shadow: 0px 5px 0px #dedede;
+		}*/
+		a.navbar-brand {
+  				font-family: 'Ubuntu', sans-serif;
+		}
+		nav li {
+  				font-size: 15px;
+		}
+
+		nav ul {
+  				list-style: none;
+  				text-align: center;
+		}
+		a.nav-link
+		{
+    			position: relative;
+		}
+		a.nav-link:hover {
+  				color: #fff;
+		}
+		a.nav-link:before {
+  				content: "";
+  				position: absolute;
+  				width: 100%;
+  				height: 2px;
+  				bottom: 0;
+  				left: 0;
+  				background-color: #FFF;
+  				visibility: hidden;
+  				transform: scaleX(0);
+  				transition: all 0.3s ease-in-out;
+		}
+		a.nav-link:hover:before {
+  				visibility: visible;
+  				transform: scaleX(1);
+		}
+		.dev-tag {
+  				font-family: 'Varela Round', sans-serif;
+		}
+		.title {
+  				position: absolute;
+  				color: #fff;
+  				/*margin-left: 160px;
+  				padding: 78px;*/
+  				font-style: bold;
+ 				font-weight: 100;
+ 				font-family: 'Varela Round', sans-serif;
+		}
+    h1 {
+      font-weight:bold;
+    }
+
+
+</style>
+{% endblock css %}
+{% block head %}
+<title>Join Us - DevLogs</title>
+{% endblock head %}
+{% block body %}
+
+<h1 class="py-5 px-5 mx-5"> JOIN US </h1><hr class="px-5 mx-5"><br>
+<form action="/join/" method="POST">
+{% csrf_token %}
+  <div class="px-5 mx-5">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+  </div> 
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" name="email" class="form-control" id="email" placeholder="Enter your Email ID"aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <label for="mob">Mobile Number</label>
+  <div class="input-group mb-2 mr-sm-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">+91</div>
+    </div>
+    <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your Mobile Number">
+  </div><p></p>
+  <div class="form-group">
+    <label for="desc">Message</label>
+    <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+  </div>
+  <hr class="px-5"><br>
+  <form class="form-inline">
+  <label class="check my-1 mr-2" for="inlineFormCustomSelectPref">Want to Join as a </label>
+  <select class="custom-select my-1 mr-sm-2" name="position" id="position">
+    <option selected>Available Positions</option>
+    <option value="Blogger">Blogger</option>
+    <option value="Graphic Designer">Graphic Designer</option>
+    <option value="Web Developer">Web Developer</option>
+  </select><p></p><p></p>
+    <div class="custom-control custom-checkbox my-1 mr-sm-2">
+    <input type="checkbox" class="custom-control-input" id="customControlInline">
+    <label class="custom-control-label" for="customControlInline">Yes, i want to Join DevLogs</label>
+  </div><br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</form>
+<br><br><br>
+{% endblock body %}

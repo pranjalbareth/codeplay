@@ -1,0 +1,428 @@
+{% extends 'base.html' %}
+{% block projectsactive %}active{% endblock projectsactive %}
+{% block css %}
+	<style>
+           .container {
+                margin-top:350px;
+                min-height: 150vh;
+          }
+      body {
+      			font-family: 'Varela Round', sans-serif;
+      	 		padding: 0;
+      	 		margin: 0;
+      }
+      p {
+      			font-size: 15px;
+      			font-family: 'Varela Round', sans-serif;
+      }
+      h2 {
+      			/*font-size: 15px;*/
+      			font-family: 'Varela Round', sans-serif;
+      }
+      /*nav{
+      			width: 100%;
+      			margin: 0 auto;
+      			background: #000;
+      			padding: 30px 0;
+      			box-shadow: 0px 5px 0px #dedede;
+      }*/
+      a.navbar-brand {
+      			font-family: 'Ubuntu', sans-serif;
+      }
+      nav li {
+      			font-size: 15px;
+      }
+
+      nav ul {
+      			list-style: none;
+      			text-align: center;
+      }
+      a.nav-link
+      {
+      			position: relative;
+      }
+      a.nav-link:hover {
+      			color: #fff;
+      }
+      a.nav-link:before {
+      			content: "";
+      			position: absolute;
+      			width: 100%;
+      			height: 2px;
+      			bottom: 0;
+      			left: 0;
+      			background-color: #FFF;
+      			visibility: hidden;
+      			transform: scaleX(0);
+      			transition: all 0.3s ease-in-out;
+      }
+      a.nav-link:hover:before {
+      			visibility: visible;
+      			transform: scaleX(1);
+      }
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+	  .bg-text {
+      font-family: 'Varela Round', sans-serif;
+		  position: absolute;
+		  color: #cccccc;
+		  font-size:55px;
+		  top: 45%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+	}
+  .icot {
+      margin:340px;
+      margin-top:-270px;
+      width: 35%;
+      height: 35%;
+    }
+    .responsive {
+        width: 100%;
+        height: 310px;
+      }
+
+/*
+.wrapper {
+  width: 1086px;
+  height: 310px;
+  position: absolute; 
+  left: 50%;
+  top: 50%;
+  margin-left:-5px;
+  margin-right:-5px;
+  transform: translate(-50%, -50%);
+  border-radius: 0px;
+  background-image: linear-gradient(to top, #9b00b2 0%, #5d1aad 20%);
+  overflow: hidden;
+}
+
+.wave {
+  width: 1000px;
+  height: 825px;
+  position: absolute;
+  top: -35%;
+  left: 50%;
+  margin-left: -500px;
+  margin-top: -550px;
+  border-radius: 35%;
+  background: rgba(0, 0, 0, 1);
+  animation: wave 15s infinite linear;
+}
+
+@keyframes wave {
+  from { transform: rotate(0deg);}
+  from { transform: rotate(360deg);}
+}
+  */
+  .card {
+        border: 
+    }
+    .title-tit {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight:700;
+            text-decoration: none !important;
+    }
+    .card-text {
+      font-family: 'Noto Serif', serif;
+    }
+    .vertcard2 {
+      width: 55%;
+    height: 55%;
+    }
+    .vertcard {
+      width: 65%;
+    height: 55%;
+    }
+  .card-title{
+    color:#252849;
+  }
+  .box__button {
+          width:250px;
+          display: block;
+          position: relative;
+          background: #000000;
+          border: 1px solid transparent;
+          border-radius: 50px;
+          height: 50px;
+          text-align: center;
+          text-decoration: none !important;
+          color: #fff;
+          line-height: 50px;
+          font-size: 18px;
+          padding: 0 70px;
+          white-space: nowrap;
+          margin-top: 25px;
+          font-family: 'Varela Round', sans-serif;
+          transition: background .5s ease;
+          overflow: hidden;
+          -webkit-mask-image: -webkit-radial-gradient(white, black);
+        }
+        .box__button:before {
+          content: '';
+          position: absolute;
+          width: 20px;
+          height: 100px;
+          background: #fff;
+          bottom: -25px;
+          left: 0;
+          border: 2px solid #fff;
+          transform: translateX(-50px) rotate(45deg);
+          transition: transform .5s ease;
+        }
+        .box__button:hover {
+          background: #e9effd;
+          border-color: #fff;
+          color:#000;
+          font-weight:bold;
+        }
+        .box__button:hover:before {
+          transform: translateX(250px) rotate(45deg);
+        }
+
+        @keyframes upndown {
+          0% {
+            transform: translateY(5px);
+          }
+          50% {
+            transform: translateY(15px);
+          }
+          100% {
+            transform: translateY(5px);
+          }
+        }
+        @keyframes smallnbig {
+          0% {
+            width: 90px;
+          }
+          50% {
+            width: 100px;
+          }
+          100% {
+            width: 90px;
+          }
+        }
+        @keyframes shine {
+          0% {
+            opacity: .2;
+          }
+          25% {
+            opacity: .1;
+          }
+          50% {
+            opacity: .2;
+          }
+          100% {
+            opacity: .2;
+          }
+        }
+    .card {
+      border
+      background: ;
+    }
+    .card-img-top {
+    width: 100%;
+    margin-left:-0.65px;
+    height: 15vw;
+    object-fit: cover;
+}
+    .contr {
+       text-decoration: none !important;
+       color:#6c757d;
+    }
+    .contr:hover {
+       text-decoration: none !important;
+        color:#454545;
+    }  
+    .cont {
+      margin-left:-40px;
+    }
+    .github-button {
+      color:#fff;
+      background-color:#000000;
+      text-decoration: none !important;
+    }
+    .github-button:hover{
+        color:#fff;
+        background-color:#0a0a0a;
+    }
+    a:.github-button:hover{
+        color:#fff;
+        background-color:#0a0a0a;
+    }
+    .live-button {
+      color:#fff;
+      text-decoration: none !important;
+    }
+    .live-button:hover{
+      color:#fff;
+      text-decoration: none !important;
+    }
+
+    .badge {
+        background:#ebedffd1;
+        position:absolute;
+        margin-left:15px;
+        margin-top:10px;
+    }
+    .prj{
+      font-size:14px;
+    }
+    .badge-repo{
+      background:#2e2e2e80;
+      margin-top:36px;
+    }
+    .badge-repo:hover{
+      background:#000000;
+    }
+</style>
+
+<style media="screen and (max-width: 600px)">
+      .icot {
+      margin:90px;
+      margin-top:-230px;
+      width: 50%;
+      height: 50%;
+    }
+    .responsive {
+        width: 100%;
+        height: 310px;
+      }
+      .bg-text {
+      font-family: 'Varela Round', sans-serif;
+      position: absolute;
+      color: #cccccc;
+      font-size:35px;
+      top: 42%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+      .wrapper {
+      width: 398px;
+      height: 310px;
+      position: absolute; 
+      left: 50%;
+      top: 50%;
+      margin-left:-2px;
+      transform: translate(-50%, -50%);
+      border-radius: 0px;
+      background-image: linear-gradient(to top,#fafaff 0%, #717bca 20%);
+      overflow: hidden;
+    }
+
+    .wave {
+      width: 1000px;
+      height: 825px;
+      position: absolute;
+      top: -35%;
+      left: 50%;
+      margin-left: -500px;
+      margin-top: -550px;
+      border-radius: 35%;
+      background: rgba(0, 0, 0, 1);
+      animation: wave 15s infinite linear;
+    }
+    @keyframes wave {
+  from { transform: rotate(0deg);}
+  from { transform: rotate(360deg);}
+}
+/*.card{
+  border:none !important;
+  background:#b0b1e7;
+}*/
+.container{
+  min-height: 150vh;
+}
+    .badge-repo{
+      background:#2e2e2ecc;
+      margin-left:15px;
+      margin-top:36px;
+    }
+</style>
+<style media="screen and (min-width: 1200px)">
+    .icot {
+      margin:450px;
+      margin-top:-310px;
+      width: 35%;
+      height: 35%;
+    }
+    .responsive {
+        width: 100%;
+        height: 310px;
+      }
+</style>
+{% block head %}
+<title>Projects - DevLogs</title>
+{% endblock head %}
+<!--endHEAD-->
+{% endblock css %}
+<!--endCSS-->
+{% block body %}
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> 
+<script src="https://use.fontawesome.com/f2a667ce23.js"></script>
+  <div class="mx-0 px-0 container-fluid">
+    <div class="carousel-item active">
+      <div class="wrapper">
+        <div class="wave"></div>
+      </div>
+        <div class="bg-text" style="font-weight:600;"id="parent">Projects<div id="border"></div></div>
+        <a href="/about/sstc/" style="text-decoration:none !important;font-family: 'Varela Round', sans-serif; position:absolute; color:#fff; font-size:15px; margin-left:15px; " class="badge-repo badge-pill btn btn-link"><i style="color:#fff;font-size:px;"class="fa fa-github-alt"></i>&nbsp;&nbsp;GitHub Repo</a>
+        <a href="/about/sstc/" class="badge badge-pill badge-light"><i style="color:#007bff;font-size:10px;"class="fa fa-circle"></i>&nbsp;&nbsp;Shri Shanakaracharya Technical Campus, Bhilai</a>
+        <img src="/static/img/000-bg.png" class="backg d-block w-100 responsive" alt="...">
+    </div>
+      </div>
+      <div class="container">
+        <div class="card mb-3" style="max-width: 950px;">
+          <div class="row no-gutters">
+            <div class="col-md-7">
+              <img src="http://127.0.0.1:8000/media/ai-poster.png" class="card-img" onerror=this.src="https://i.imgur.com/fOWuolO.png">
+            </div>
+            <div class="col-md-5">
+              <div class="card-body">
+                <!--a class="tag" href="/{{blog.tag}}">{{blog.tag}}</a><p></p-->
+                <h4 class="card-title text-dark"><a class="title-tit text-dark" href="https://github.com/harshshrivastava902/sstc-ecell/">SSTC E-Cell Website</a></h4>
+                <p class="card-text">The complete website for <b>E-Cell</b> (Entrepreneurship Cell) of <i>Shri Shanakaracharya Technical Campus, Bhilai</i>. Entrepreneurship Cell, SSTC Bhilai is a non-profit student’s organization dedicated to promoting the spirit of entrepreneurship among students throughout the Campus & beyond. </p>
+                <button type="button" class="prj live-button btn btn-primary"><a class="live-button" href="pranjalbareth.github.io" aria-label="View Live Project of ECELL"><i class="fa fa-rocket"></i>&nbsp;&nbsp;View Live Project</a></button>
+                <button type="button" class="prj github-button btn"><a class="github-button" href="https://github.com/harshshrivastava902/sstc-ecell/" aria-label="View Source of SSTC-ECELL on GitHub"><i class="fa fa-github-alt"></i>&nbsp;&nbsp;View on Github</a></button>
+                <hr>
+                <div class="cont" >
+                 <ul><span class="card-text"  style="color:#343a40;"><b>Contributors : </b></small></span><p></p>
+                  <li style="color:#fff;"> <p class="card-text"><small class="text-muted">&nbsp;<a class="contr" href="https://github.com/pixan198">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;Ashish Chawda</small></a></p></li>
+                  <li style="color:#fff;"> <p class="card-text"><small class="text-muted">&nbsp;<a class="contr" href="https://github.com/pixan198">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;Sameer Nayak</small></a></p></li>
+                  <li style="color:#fff;"> <p class="card-text"><small class="text-muted">&nbsp;<a class="contr" href="https://github.com/pixan198">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;Harsh Shrivastava</small></a></p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 950px;">
+          <div class="row no-gutters">
+            <div class="col-md-7">
+              <img src="http://127.0.0.1:8000/media/ai-poster.png" class="card-img" onerror=this.src="https://i.imgur.com/fOWuolO.png">
+            </div>
+            <div class="col-md-5">
+              <div class="card-body">
+                <!--a class="tag" href="/{{blog.tag}}">{{blog.tag}}</a><p></p-->
+                <h4 class="card-title text-dark"><a class="title-tit text-dark" href="https://github.com/we-developers-community/community-website">DevSpace Website</a></h4>
+                <p class="card-text">Official Website of <b>Developers Community</b> of <i>Shri Shanakaracharya Technical Campus, Bhilai</i>. DevSpace, shares free resources, events, technical new. It's made for developers by developers, to increase awareness for coding & developement among students throughout the Campus & beyond. </p>
+                <button type="button" class="prj live-button btn btn-primary"><a class="live-button" href="pranjalbareth.github.io" aria-label="View Live Project of DevSpace"><i class="fa fa-rocket"></i>&nbsp;&nbsp;View Live Project</a></button>
+                <button type="button" class="prj github-button btn"><a class="github-button" href="https://github.com/harshshrivastava902/sstc-ecell/" aria-label="View Source of DevSpace on GitHub"><i class="fa fa-github-alt"></i>&nbsp;&nbsp;View on Github</a></button>
+                <hr>
+                <div class="cont" >
+                 <ul><span class="card-text"  style="color:#343a40;"><b>Contributors : </b></small></span><p></p>
+                  <li style="color:#fff;"> <p class="card-text"><small class="text-muted">&nbsp;<a class="contr" href="https://github.com/pixan198">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;Ashish Chawda</small></a><small class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="contr" href="https://github.com/pixan198">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;Pranjal Bareth</small></p></li>
+                  <li style="color:#fff;"> <p class="card-text"><small class="text-muted">&nbsp;<a class="contr" href="https://github.com/pixan198">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;Vaibhav Agrawal</small></a><small class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="contr" href="https://github.com/pixan198">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;Kamlesh Jangley</small></p></li>
+                  <li style="color:#fff;"><p class="card-text"><small class="text-muted">&nbsp;<a class="contr" href="https://github.com/pixan198">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;Bhavya Sahu</small></a>
+                  <small class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="contr" href="https://github.com/pixan198">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;Aaliya Haque</small></p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  <br>
+  </div>  
+<!--homer-code-->
+<!--endBODY-->
+{% endblock body %}

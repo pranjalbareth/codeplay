@@ -1,0 +1,415 @@
+{% extends 'base.html' %}
+{% block playgroundactive %}active{% endblock playgroundactive %}
+{% block css %}
+	<style>
+           .container {
+                margin-top:350px;
+                min-height: 150vh;
+          }
+      body {
+      			font-family: 'Varela Round', sans-serif;
+      	 		padding: 0;
+      	 		margin: 0;
+      }
+      p {
+      			font-size: 15px;
+      			font-family: 'Varela Round', sans-serif;
+      }
+      h2 {
+      			/*font-size: 15px;*/
+      			font-family: 'Varela Round', sans-serif;
+      }
+      /*nav{
+      			width: 100%;
+      			margin: 0 auto;
+      			background: #000;
+      			padding: 30px 0;
+      			box-shadow: 0px 5px 0px #dedede;
+      }*/
+      a.navbar-brand {
+      			font-family: 'Ubuntu', sans-serif;
+      }
+      nav li {
+      			font-size: 15px;
+      }
+
+      nav ul {
+      			list-style: none;
+      			text-align: center;
+      }
+      a.nav-link
+      {
+      			position: relative;
+      }
+      a.nav-link:hover {
+      			color: #fff;
+      }
+      a.nav-link:before {
+      			content: "";
+      			position: absolute;
+      			width: 100%;
+      			height: 2px;
+      			bottom: 0;
+      			left: 0;
+      			background-color: #FFF;
+      			visibility: hidden;
+      			transform: scaleX(0);
+      			transition: all 0.3s ease-in-out;
+      }
+      a.nav-link:hover:before {
+      			visibility: visible;
+      			transform: scaleX(1);
+      }
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+	  .bg-text {
+      font-family: 'Varela Round', sans-serif;
+		  position: absolute;
+		  color: #cccccc;
+		  font-size:55px;
+		  top: 45%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+	}
+  .icot {
+      margin:340px;
+      margin-top:-270px;
+      width: 35%;
+      height: 35%;
+    }
+    .responsive {
+        width: 100%;
+        height: 310px;
+      }
+
+/*
+.wrapper {
+  width: 1086px;
+  height: 310px;
+  position: absolute; 
+  left: 50%;
+  top: 50%;
+  margin-left:-5px;
+  margin-right:-5px;
+  transform: translate(-50%, -50%);
+  border-radius: 0px;
+  background-image: linear-gradient(to top, #9b00b2 0%, #5d1aad 20%);
+  overflow: hidden;
+}
+
+.wave {
+  width: 1000px;
+  height: 825px;
+  position: absolute;
+  top: -35%;
+  left: 50%;
+  margin-left: -500px;
+  margin-top: -550px;
+  border-radius: 35%;
+  background: rgba(0, 0, 0, 1);
+  animation: wave 15s infinite linear;
+}
+
+@keyframes wave {
+  from { transform: rotate(0deg);}
+  from { transform: rotate(360deg);}
+}
+  */
+  .card {
+        border: 
+    }
+    .title-tit {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight:700;
+            text-decoration: none !important;
+    }
+    .card-text {
+      font-family: 'Noto Serif', serif;
+    }
+    .vertcard2 {
+      width: 55%;
+    height: 55%;
+    }
+    .vertcard {
+      width: 65%;
+    height: 55%;
+    }
+  .card-title{
+    color:#252849;
+  }
+  .box__button {
+          width:250px;
+          display: block;
+          position: relative;
+          background: #000000;
+          border: 1px solid transparent;
+          border-radius: 50px;
+          height: 50px;
+          text-align: center;
+          text-decoration: none !important;
+          color: #fff;
+          line-height: 50px;
+          font-size: 18px;
+          padding: 0 70px;
+          white-space: nowrap;
+          margin-top: 25px;
+          font-family: 'Varela Round', sans-serif;
+          transition: background .5s ease;
+          overflow: hidden;
+          -webkit-mask-image: -webkit-radial-gradient(white, black);
+        }
+        .box__button:before {
+          content: '';
+          position: absolute;
+          width: 20px;
+          height: 100px;
+          background: #fff;
+          bottom: -25px;
+          left: 0;
+          border: 2px solid #fff;
+          transform: translateX(-50px) rotate(45deg);
+          transition: transform .5s ease;
+        }
+        .box__button:hover {
+          background: #e9effd;
+          border-color: #fff;
+          color:#000;
+          font-weight:bold;
+        }
+        .box__button:hover:before {
+          transform: translateX(250px) rotate(45deg);
+        }
+
+        @keyframes upndown {
+          0% {
+            transform: translateY(5px);
+          }
+          50% {
+            transform: translateY(15px);
+          }
+          100% {
+            transform: translateY(5px);
+          }
+        }
+        @keyframes smallnbig {
+          0% {
+            width: 90px;
+          }
+          50% {
+            width: 100px;
+          }
+          100% {
+            width: 90px;
+          }
+        }
+        @keyframes shine {
+          0% {
+            opacity: .2;
+          }
+          25% {
+            opacity: .1;
+          }
+          50% {
+            opacity: .2;
+          }
+          100% {
+            opacity: .2;
+          }
+        }
+    .card {
+      border
+      background: ;
+    }
+    .card-img-top {
+    width: 100%;
+    margin-left:-0.65px;
+    height: 15vw;
+    object-fit: cover;
+}
+    .contr {
+       text-decoration: none !important;
+       color:#6c757d;
+    }
+    .contr:hover {
+       text-decoration: none !important;
+        color:#454545;
+    }  
+    .cont {
+      margin-left:-40px;
+    }
+    .github-button {
+      color:#fff;
+      background-color:#000000;
+      text-decoration: none !important;
+    }
+    .github-button:hover{
+        color:#fff;
+        background-color:#0a0a0a;
+    }
+    a:.github-button:hover{
+        color:#fff;
+        background-color:#0a0a0a;
+    }
+    .live-button {
+      color:#fff;
+      text-decoration: none !important;
+    }
+    .live-button:hover{
+      color:#fff;
+      text-decoration: none !important;
+    }
+
+    .badge {
+        background:#ebedffd1;
+        position:absolute;
+        margin-left:15px;
+        margin-top:10px;
+    }
+    .prj{
+      font-size:14px;
+    }
+    .badge-repo{
+      margin-top:36px;
+    }
+    .btn:focus{
+  outline: none;
+  box-shadow: none;
+}
+  .prj:focus{
+  outline: none !important;
+  box-shadow: none !important;
+  border:none !important;
+}
+.dis-head{
+    color:#e1e1e1;
+    font-family: 'Ubuntu', sans-serif;";
+  }
+</style>
+
+<style media="screen and (max-width: 600px)">
+      .icot {
+      margin:90px;
+      margin-top:-230px;
+      width: 50%;
+      height: 50%;
+    }
+    .dis-head{
+    color:#e1e1e1;
+    font-family: 'Ubuntu', sans-serif;
+    font-size:20px;
+  }
+    .responsive {
+        width: 100%;
+        height: 310px;
+      }
+      .bg-text {
+      font-family: 'Varela Round', sans-serif;
+      position: absolute;
+      color: #cccccc;
+      font-size:25px;
+      top: 42%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+      .wrapper {
+      width: 398px;
+      height: 310px;
+      position: absolute; 
+      left: 50%;
+      top: 50%;
+      margin-left:-2px;
+      transform: translate(-50%, -50%);
+      border-radius: 0px;
+      background-image: linear-gradient(to top,#fafaff 0%, #717bca 20%);
+      overflow: hidden;
+    }
+
+    .wave {
+      width: 1000px;
+      height: 825px;
+      position: absolute;
+      top: -35%;
+      left: 50%;
+      margin-left: -500px;
+      margin-top: -550px;
+      border-radius: 35%;
+      background: rgba(0, 0, 0, 1);
+      animation: wave 15s infinite linear;
+    }
+    @keyframes wave {
+  from { transform: rotate(0deg);}
+  from { transform: rotate(360deg);}
+}
+/*.card{
+  border:none !important;
+  background:#b0b1e7;
+}*/
+.container{
+  min-height: 150vh;
+}
+    .badge-repo{
+      margin-left:15px;
+      margin-top:37px;
+    }
+</style>
+<style media="screen and (min-width: 1200px)">
+    .icot {
+      margin:450px;
+      margin-top:-310px;
+      width: 35%;
+      height: 35%;
+    }
+    .responsive {
+        width: 100%;
+        height: 310px;
+      }
+</style>
+{% block head %}
+<title>Playground - CodePlay</title>
+{% endblock head %}
+<!--endHEAD-->
+{% endblock css %}
+<!--endCSS-->
+{% block body %}
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> 
+<script src="https://use.fontawesome.com/f2a667ce23.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <div class="mx-0 px-0 container-fluid">
+    <div class="carousel-item active">
+      <div class="wrapper">
+        <div class="wave"></div>
+      </div>
+        <div class="bg-text" style="font-weight:600;"id="parent"><i class="fa fa-magic"></i>&nbsp;Playground<div id="border"></div></div>
+        <a href="/about/sstc/" style="text-decoration:none !important;font-family: 'Varela Round', sans-serif; position:absolute; color:#fff; font-size:10px; margin-left:15px; " class="badge-repo badge-pill btn btn-danger">&nbsp;<i style="color:#fff;font-size:12px;margin-top:2px;"class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;SSTC Bhilai Students Only&nbsp;</a>
+        <a href="/about/sstc/" class="badge badge-pill badge-light"><i style="color:#007bff;font-size:10px;"class="fa fa-circle"></i>&nbsp;&nbsp;Shri Shanakaracharya Technical Campus, Bhilai</a>
+        <img src="/static/img/000-bg.png" class="backg d-block w-100 responsive" alt="...">
+    </div>
+      </div>
+      <div class="container">
+          <div class="jumbotron" style="background-color:#000;">
+              <h2 class="dis-head"><i class="fas fa-hat-wizard"></i><b>&nbsp;&nbsp;WizCode :</b> School of Wizardry & Witchcraft</h2><br>
+              <p style="font-size:15px; color:#b9bbbe;font-family: 'Ubuntu', sans-serif;" class="lead">WizCode is a Magical themed School focused for every student of Technical field. You can get Free Roadmaps for certain career fields & paths. Projects. Notes. Group Chat. Games. Challenges. Events. & a lot more. It's UnOfficial & a Student Initiative. Only for SSTC Bhilai Students. For getting Admission in WizCode School of Witchcraft & Wizardry, Register below.</p>
+              <hr style="background-color:#b9bbbe;" class="my-4">
+              <p style="font-size:11px; color:#b9bbbe; font-family: 'Ubuntu', sans-serif;">* Register below and Enroll in <b>WizEnroll</b> : WizCode Wizard Enrollment Porgram. ( WizEnroll : Will be availale soon. Stay tuned. )</p><p></p>
+              <a class="prj btn btn-primary btn-lg" style="background-color:#7289da; margin-top:-6px; border:none !important;"href="#" role="button"><!-- <i class="fab fa-discord" style="font-size:18px;"> --></i>&nbsp;&nbsp;Register in WizEnroll</a>
+              <a class="prj btn btn-primary btn-lg ml-2" style=" margin-top:-6px; border:none !important;"href="/wizcode" role="button"><!-- <i class="fab fa-discord" style="font-size:18px;"> --></i>&nbsp;&nbsp;Enter WizCode</a>
+          </div>
+          <div class="jumbotron" style="background-color:#36393f;">
+              <h2 class="dis-head"><i class="fab fa-discord"></i><b>&nbsp;&nbsp;SSTC Folks Discord Community !</b></h2><br>
+              <p style="font-size:15px; color:#b9bbbe;font-family: 'Ubuntu', sans-serif;" class="lead">SSTC Folks Discord Server is for students of SSTC Bhilai. You'll have your year groups, boys/girls only group, Campus-Talk Section, private groups, gaming groups, memes section, harry potter novel themed groups & several more.</p>
+              <hr style="background-color:#b9bbbe;" class="my-4">
+              <!-- <p>Be Respectfull, that's it & you're Welcome !</p> -->
+              <a class="prj btn btn-primary btn-lg" style="background-color:#7289da; margin-top:-6px; border:none !important;"href="https://discord.gg/gvc5J5" role="button"><!-- <i class="fab fa-discord" style="font-size:18px;"> --></i>&nbsp;&nbsp;Join SSTC Folks</a>
+          </div> 
+
+         <!-- <video autoplay class="">
+            <source src="/media/mmm.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>  -->
+        </div>
+  <br>
+  </div>  
+<!--homer-code-->
+<!--endBODY-->
+{% endblock body %}

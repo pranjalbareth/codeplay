@@ -22,10 +22,15 @@ urlpatterns = [
 		path('', views.home, name='home'),
 		path('blog/', views.blog, name='blog'),
 		path('resources/', views.resources, name='resources'),
+        path('playground/', views.playground, name='playground'),
+        path('events/', views.events, name='events'),
 		path('blogpost/<str:slug>', views.blogpost, name='blog'),
         path('join/', views.join, name='join'),
         path('General/', views.blog, name='General'),
         path('projects/', views.projects, name='projects'),
+        path('search/', views.search, name='search'),
+        path('about/', views.about, name='about'),
+        path('wizcode/', views.wizcode, name='wizcode')
 ]
 
 from django.conf import settings

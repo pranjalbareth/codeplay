@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block resourcesactive %}active{% endblock resourcesactive %}
+{% block aboutactive %}active{% endblock aboutactive %}
 {% block css %}
 	<style>
            .container {
@@ -81,6 +81,7 @@
         width: 100%;
         height: 310px;
       }
+
 /*
 .wrapper {
   width: 1086px;
@@ -114,11 +115,30 @@
   from { transform: rotate(360deg);}
 }
   */
+  .card {
+        border: 
+    }
+    .title-tit {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight:700;
+            text-decoration: none !important;
+    }
+    .card-text {
+      font-family: 'Noto Serif', serif;
+    }
+    .vertcard2 {
+      width: 55%;
+    height: 55%;
+    }
+    .vertcard {
+      width: 65%;
+    height: 55%;
+    }
   .card-title{
     color:#252849;
   }
   .box__button {
-          width:200px;
+          width:250px;
           display: block;
           position: relative;
           background: #000000;
@@ -130,6 +150,7 @@
           color: #fff;
           line-height: 50px;
           font-size: 18px;
+          padding: 0 70px;
           white-space: nowrap;
           margin-top: 25px;
           font-family: 'Varela Round', sans-serif;
@@ -195,8 +216,66 @@
             opacity: .2;
           }
         }
+    .card {
+      border
+      background: ;
+    }
+    .card-img-top {
+    width: 100%;
+    margin-left:-0.65px;
+    height: 15vw;
+    object-fit: cover;
+}
+    .contr {
+       text-decoration: none !important;
+       color:#6c757d;
+    }
+    .contr:hover {
+       text-decoration: none !important;
+        color:#454545;
+    }  
+    .cont {
+      margin-left:-40px;
+    }
+    .github-button {
+      color:#fff;
+      background-color:#000000;
+      text-decoration: none !important;
+    }
+    .github-button:hover{
+        color:#fff;
+        background-color:#0a0a0a;
+    }
+    a:.github-button:hover{
+        color:#fff;
+        background-color:#0a0a0a;
+    }
+    .live-button {
+      color:#fff;
+      text-decoration: none !important;
+    }
+    .live-button:hover{
+      color:#fff;
+      text-decoration: none !important;
+    }
 
-  </style>
+    .badge {
+        background:#ebedffd1;
+        position:absolute;
+        margin-left:15px;
+        margin-top:10px;
+    }
+    .prj{
+      font-size:14px;
+    }
+    .badge-repo{
+      margin-top:36px;
+    }
+    .btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+</style>
 
 <style media="screen and (max-width: 600px)">
       .icot {
@@ -213,7 +292,7 @@
       font-family: 'Varela Round', sans-serif;
       position: absolute;
       color: #cccccc;
-      font-size:35px;
+      font-size:29px;
       top: 42%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -247,13 +326,17 @@
   from { transform: rotate(0deg);}
   from { transform: rotate(360deg);}
 }
-.card{
+/*.card{
   border:none !important;
   background:#b0b1e7;
-}
+}*/
 .container{
   min-height: 150vh;
 }
+    .badge-repo{
+      margin-left:15px;
+      margin-top:37px;
+    }
 </style>
 <style media="screen and (min-width: 1200px)">
     .icot {
@@ -267,9 +350,8 @@
         height: 310px;
       }
 </style>
-
 {% block head %}
-<title>Resources - DevLogs</title>
+<title>About - CodePlay</title>
 {% endblock head %}
 <!--endHEAD-->
 {% endblock css %}
@@ -282,64 +364,22 @@
       <div class="wrapper">
         <div class="wave"></div>
       </div>
-        <div class="bg-text" id="parent">Resources<div id="border"></div></div>
+        <div class="bg-text" style="font-weight:600;"id="parent"><i class="fa fa-superpowers"></i>&nbsp;About<div id="border"></div></div>
+        <a href="/about/sstc/" class="badge badge-pill badge-light"><i style="color:#007bff;font-size:10px;"class="fa fa-circle"></i>&nbsp;&nbsp;Shri Shanakaracharya Technical Campus, Bhilai</a>
         <img src="/static/img/000-bg.png" class="backg d-block w-100 responsive" alt="...">
-
     </div>
       </div>
       <div class="container">
-        <div class="card-deck">
-      <div class="card mb-3">
-        <img class="card-img-top" src="http://127.0.0.1:8000/media/img-404-u.png" onerror=this.src="https://i.imgur.com/fOWuolO.png">
-        <div class="card-body">
-          <h5 class="card-title">Web Developments</h5>
-          <!--p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p-->
+        <div class="jumbotron">
+                <h3 class="display-6" style="font-weight:bold;" >Hey, SSTCian!</h3>
+                <p class="lead">CodePlay is a UnOfficial Virtual Playground of Shri Shanakaracharya Technical Campus, Bhilai. Consists of Blog, Resources, Event Details, Projects Showcase, and Virtual Playground for Students.</p>
+                <hr class="my-4">
+                <p>It's Open Source. Built on Django. Only for Students of SSTC Bhilai ! Want to Join Us ! Want to Contribute or Serve something. Then Join Us below !</p>
+                <a class="btn btn-primary btn-lg" href="/join" role="button">Join Us</a>
         </div>
-      </div>
-      <div class="card mb-3">
-        <img class="card-img-top" src="http://127.0.0.1:8000/media/img-404-u.png" onerror=this.src="https://i.imgur.com/fOWuolO.png">
-        <div class="card-body">
-          <h5 class="card-title">Android Devlopment</h5>
-          <!--p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p-->
         </div>
-      </div>
-      <div class="card mb-3">
-        <img class="card-img-top" src="http://127.0.0.1:8000/media/img-404-u.png" onerror=this.src="https://i.imgur.com/fOWuolO.png">
-        <div class="card-body">
-          <h5 class="card-title">API's</h5>
-          <!--p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p-->
-        </div>
-      </div>
-    </div>
-    <!--Deck 2-->
-    <br>
-    <div class="card-deck">
-      <div class="card mb-3">
-        <img class="card-img-top" src="http://127.0.0.1:8000/media/img-404-u.png" onerror=this.src="https://i.imgur.com/fOWuolO.png">
-        <div class="card-body">
-          <h5 class="card-title">Frameworks</h5>
-          <!--p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p-->
-        </div>
-      </div>
-      <div class="card mb-3">
-        <img class="card-img-top" src="http://127.0.0.1:8000/media/img-404-u.png" onerror=this.src="https://i.imgur.com/fOWuolO.png">
-        <div class="card-body">
-          <h5 class="card-title">Game Development</h5>
-          <!--p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p-->
-        </div>
-      </div>
-      <div class="card mb-3">
-        <img class="card-img-top" src="http://127.0.0.1:8000/media/img-404-u.png" onerror=this.src="https://i.imgur.com/fOWuolO.png">
-        <div class="card-body">
-          <h5 class="card-title">Competitive Programming</h5>
-          <!--p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p-->
-        </div>
-      </div>
-    </div>
-    <a target="_self" href="/blog" class="box__button">Go to Logs &nbsp;&nbsp;<i class="fa fa-arrow-circle-right"></i>
-</a><br>
-  </div>
-
+  <br>
+  </div>  
 <!--homer-code-->
 <!--endBODY-->
 {% endblock body %}

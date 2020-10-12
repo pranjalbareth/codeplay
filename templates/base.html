@@ -17,13 +17,16 @@
         .container {
             min-height: 150vh;
         }
+        .prj{
+          font-size:5px;
+    }
     </style>
     {% endblock css %}
-    <title>{% block title %}DevLogs{% endblock title %}</title>
+    <title>{% block title %}CodePlay{% endblock title %}</title>
   </head>
   <body>
     <nav class="navbar navbar-dark navbar-expand-lg sticky-top" style="color: white; background-color: #000000;">
-  <a class="navbar-brand" style="font-family: 'Varela Round', sans-serif; font-size: 20px" href="#">&lt/&gt DevLogs</a>
+  <a class="navbar-brand" style="font-family: 'Varela Round', sans-serif; font-size: 20px" href="#">&lt/&gt &nbsp;CodePlay</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -36,16 +39,123 @@
       <li class="nav-item {% block blogactive %}{% endblock blogactive %}">
         <a class="nav-link" href="/blog">Logs</a>
       </li>
-      <li class="nav-item {% block resourcesactive %}{% endblock resourcesactive %}">
+      <li class="nav-item {% block playgroundactive %}{% endblock playgroundactive %}">
+        <a class="nav-link" href="/playground">Playground</a>
+      </li>
+      <!--li class="nav-item {% block resourcesactive %}{% endblock resourcesactive %}">
         <a class="nav-link" href="/resources">Resources</a>
+      </li-->
+      <li class="nav-item {% block eventsactive %}{% endblock eventsactive %}">
+        <a class="nav-link" href="/events">Events</a>
       </li>
       <li class="nav-item {% block projectsactive %}{% endblock projectsactive %}">
         <a class="nav-link" href="/projects">Projects</a>
       </li>
-      <li class="nav-item {% block joinactive %}{% endblock joinactive %}">
-        <a class="nav-link" href="/join">Join Us</a>
+      <li class="nav-item {% block aboutactive %}{% endblock aboutactive %}">
+        <a class="nav-link" href="/about">About</a>
       </li>
-  </div>
+      <!-- <li class="nav-item {% block joinactive %}{% endblock joinactive %}">
+        <a class="nav-link" href="/join">Join Us</a>
+      </li> -->
+
+<!-- {% for message in messages %}
+<div style="position:absolute;" class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+  <strong>Hey ! </strong> {{ messages }}.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endfor %} -->
+
+<!-- <li>
+        <!Button to trigger SignUpmodal>
+        <button type="button" class="prj btn btn-outline-primary mr-2" data-toggle="modal" data-target="#signupModal">
+          SignUp
+        </button>
+        < SignUp Modal>
+        <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="signupModal">SignUp here</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="username">Username</label>
+                      <input type="text" class="form-control" name="username" id="username" placeholder="Choose a unique username">
+                    </div>
+                    <div class="form-group">
+                      <label for="fname">First Name</label>
+                      <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter First Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="lname">Last Name</label>
+                      <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Last Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email address</label>
+                      <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" class="form-control" id="password" placeholder="Choose your password"></input>
+                    </div>
+                    <div class="form-group">
+                      <label for="cpassword">Confirm Password</label>
+                      <input type="password" class="form-control" id="cpassword" placeholder="Enter your password again"></input>
+                    </div>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+</li>
+<li>
+         Button to trigger loginmodal >
+        <button type="button" class="prj btn btn-outline-primary mr-2" data-toggle="modal" data-target="#loginModal">
+          Login
+        </button>
+</li>
+  
+        <!- Login Modal 
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="loginModal">Login to CodePlay</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" name="loginusername" id="username" placeholder="Enter username">
+          </div>
+          <div class="form-group">
+            <label for="pass">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter your password"></input>
+          </div>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </form>
+              </div>
+              <div class="modal-footer">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        </ul>
+      </div>
+</nav> -->
+</ul>
+</div>
 </nav>
     {% block body %}{% endblock body %}
 
@@ -57,5 +167,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
-    <footer style="font-family: roboto; background:#000; color:#575757;"class="text-center py-3 text-light">  Copyright &copy; DevLogs | Pranjal Bareth </footer>
+    <footer style="font-family: roboto; background:#000; color:#575757;"class="text-center py-3 text-light">  Copyright &copy; CodePlay | Pranjal Bareth </footer>
 </html>

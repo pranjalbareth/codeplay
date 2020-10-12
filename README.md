@@ -1,2 +1,2 @@
-# devlogs
- A Blog for Developers !
+# CodeRant - SSTC
+ Coding Club of SSTC Bhilai

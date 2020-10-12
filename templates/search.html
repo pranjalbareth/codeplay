@@ -90,15 +90,23 @@
     .card-text {
       font-family: 'Noto Serif', serif;
     }
-    .form-control{
-      border: 0;
-      outline: 0;
-      background: transparent;
-      border-bottom: 0px solid black;
-    }
+.form-control{
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 0px solid black;
+}
     .form-control:focus {
         border-color: #fff0;
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0) inset, 0px 0px 8px rgba(255, 255, 255, 255);
+    }
+    .btn{
+      color:#6c758d;font-size:20px;margin-left:-13px;margin-top:-14px;"
+    }
+     .btn:focus {
+        border-color: #fff0;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0) inset, 0px 0px 8px rgba(255, 255, 255, 255);
+    }
     }
 </style>
 {% endblock css %}
@@ -108,17 +116,30 @@
 <h1 class=" my-3"style="font-weight:bold; font-size:50px;">Logs</h1>
 <form method="get" action="/search" class="form-inline my-2 my-lg-0">
   <div class="form-group">
-    <input type="search" class="form-control" id="search" name="query" aria-label="Search" placeholder="Search something">
+    <input type="search" class="form-control" id="query" name="query" aria-label="Search" placeholder="Search something else">
   </div>&nbsp;&nbsp;&nbsp;
-   <button type="submit" style="color:#000;font-size:20px;margin-left:-28px;margin-top:-14px;" class="btn btn-link">
+  <button type="submit"  class="btn btn-link">
      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
       <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
 </svg>
    </button>
+  </a>
 </form>
-<hr><br>
-        {% for blog in blogs %}
+<hr>
+<h4><b> Search Results : </b></h4><p></p><br>
+        {% if allblogs|length < 1 %}
+
+        Your search - <b> {{query}} </b> - did not match any Logs.<br><br>
+
+        Suggestions:<br><br>
+        <ul>
+        <li>Make sure that all words are spelled correctly.</li>
+        <li>Try different keywords.</li>
+        <li>Try more general keywords.</li>
+        <li>Try fewer keywords.</li>
+        {% endif %}
+        {% for blog in allblogs %}
         <div class="card mb-3" style="max-width: 950px;">
           <div class="row no-gutters">
             <div class="col-md-4">

@@ -42,6 +42,12 @@ def blogpost(request, slug):
 def resources(requests):
 	return render(requests, 'resources.html')
 
+def events(requests):
+	return render(requests, 'events.html')
+
+def playground(requests):
+	return render(requests, 'playground.html')
+
 def projects(requests):
 	return render(requests, 'projects.html')
 
@@ -59,3 +65,21 @@ def join(requests):
 		instance.save()
 
 	return render(requests, 'join.html') 
+
+def search(request):
+	query = request.GET['query']
+	if len(query)>75:
+		allblogs = blogs.objects.none()
+	else:
+		allblogsContent = Blog.objects.filter(content__icontains=query)
+		allblogsTitle = Blog.objects.filter(title__icontains=query)
+		allblogsTag = Blog.objects.filter(tag__icontains=query)
+		allblogs = allblogsTitle.union(allblogsContent, allblogsTag)
+	params = {'allblogs': allblogs, 'query':query}
+	return render(request, 'search.html', params)
+
+def about(request):
+	return render(request, 'about.html')
+
+def wizcode(request):
+	return render(request, 'wizcode.html')
